@@ -39,14 +39,22 @@ export default function Home({ exploreData, cardsData }) {
 
 
 
-              <section>
-                <h2 className='text-4xl font-semibold py-8'>Live anywhere</h2>
+{/* edits the live anywhere section */}
+<section>
+          <h2 className="text-4xl font-semibold py-8">Live anywhere</h2>
+              <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
 
-                {cardsData?.map(({ img, title }) => {
-                  <MediumCard key={img} img={img} title={title}   />
-
-                })}
-              </section>
+          {cardsData?.map(({img, title})=> (
+            <MediumCard key={img} img={img} title={title} />
+            
+            ))}
+            {/* <LargeCard 
+            img="https://links.papareact.com/4cj"
+            title="The Great Outdoors"
+            description="Wishlist curated by Airbnb."
+            buttonText="Get Inspired" /> */}
+            </div>
+        </section>
 
       </main>
     </div>
